@@ -1,0 +1,144 @@
+<body>
+
+<div class="container">
+
+<h1>🔥 Viral Name Generator</h1>
+
+<p style="text-align:center;margin-bottom:20px;">
+<a href="about.html">About</a> |
+<a href="privacy.html">Privacy Policy</a> |
+<a href="contact.html">Contact</a> |
+<a href="faq.html">FAQ</a>
+</p>
+
+<button class="gen" onclick="generate()">Generate Name</button> <button class="copy" onclick="copyText()">Copy</button> <button class="wa" onclick="shareWA()">Share WA</button>
+
+<div class="result" id="hasil">Klik Generate</div>
+
+<div class="section">
+
+<h2>Apa itu Viral Name Generator?</h2>
+
+<p>
+Viral Name Generator adalah tools gratis untuk membuat nama gaming unik,
+keren, aesthetic, dan mudah diingat. Cocok digunakan untuk Free Fire,
+Mobile Legends, PUBG, Roblox, Valorant, TikTok, dan berbagai platform lainnya.
+</p>
+
+<p>
+Dengan satu klik, sistem akan membuat kombinasi nickname secara otomatis
+menggunakan berbagai kata populer, nama anime, simbol unik, dan angka acak.
+</p>
+
+<h3>Fitur Website</h3>
+
+<ul>
+<li>Generator nama otomatis</li>
+<li>500+ kombinasi nickname</li>
+<li>Style gaming & anime</li>
+<li>Copy sekali klik</li>
+<li>Share ke WhatsApp</li>
+<li>Gratis digunakan</li>
+</ul>
+
+<h2>200 Nama FF Keren</h2>
+
+<p>
+ShadowX, DarkHunter, AlphaKing, GhostFire, CyberStorm, ToxicWolf,
+NightBlade, PhantomX, DemonKing, EliteHunter, DragonSoul,
+LegendFire, ThunderWolf, FrostKing, InfernoX, ShadowKnight,
+DarkPhoenix, IceHunter, StormLegend, CyberWolf, SilentHunter,
+DarkDragon, AlphaWolf, ToxicLegend, FireGhost, NightKing,
+ShadowReaper, FrostHunter, CyberKnight, InfernoKing dan masih banyak lagi.
+</p>
+
+<h2>Nama Mobile Legends Keren</h2>
+
+<p>
+Untuk pemain Mobile Legends, nickname unik dapat membuat akun lebih mudah dikenali.
+Contohnya adalah AlphaLord, CyberKnight, StormBreaker, DarkAssassin,
+PhantomBlade, EliteWarrior, MysticHero, DragonKnight, LegendSlayer,
+DarkFighter, KingOfDawn, ShadowWarrior dan lainnya.
+</p>
+
+<h2>Nama Anime untuk Game</h2>
+
+<p>
+Karakter anime sering menjadi inspirasi nickname keren seperti Gojo,
+Itachi, Madara, Sasuke, Naruto, Luffy, Zoro, Levi, Mikasa,
+Eren, Kakashi, Obito, Tanjiro, Zenitsu dan banyak karakter populer lainnya.
+</p>
+
+<h2>Nama Guild Keren</h2>
+
+<p>
+Jika kamu sedang membuat guild atau clan, beberapa nama yang bisa digunakan
+antara lain Shadow Legion, Dark Empire, Phantom Squad, Cyber Warriors,
+Dragon Force, Infinity Legends, Toxic Reapers, Alpha Wolves,
+Night Raiders dan Mystic Kingdom.
+</p>
+
+<h2>Nama TikTok Aesthetic</h2>
+
+<p>
+Untuk akun TikTok atau media sosial, nama aesthetic seperti Moonlight,
+VelvetDream, AuroraSky, SilentRose, CrystalNight, DreamWalker,
+LunarWave, StarlightGlow, MidnightSoul dan VelvetMoon bisa menjadi pilihan.
+</p>
+
+<h2>Mengapa Memilih Viral Name Generator?</h2>
+
+<p>
+Viral Name Generator dibuat untuk membantu pemain game dan pengguna media sosial
+menemukan nama yang unik, menarik, dan mudah diingat. Dengan sistem generator
+otomatis, pengguna tidak perlu lagi bingung mencari inspirasi nickname.
+</p>
+
+<p>
+Tool ini dapat digunakan secara gratis tanpa registrasi. Kami akan terus
+menambahkan koleksi nama baru agar pilihan nickname semakin beragam dan sesuai
+dengan tren game maupun media sosial terbaru.
+</p>
+
+</div>
+
+<div class="footer">
+© 2026 Ban9jeck • All Rights Reserved
+</div>
+
+</div>
+
+<script>
+const words = [
+"Gojo","Naruto","Luffy","Zoro","Itachi","Sasuke","Madara",
+"Shadow","Dark","Ghost","Cyber","Alpha","Omega",
+"King","Queen","Pro","Elite","Legend","Fire","Ice","Storm","Blade","Ninja"
+];
+
+const symbol = ["⚡","々","✧","☠","★","〆","ツ"];
+
+function generate(){
+let a = words[Math.floor(Math.random()*words.length)];
+let b = words[Math.floor(Math.random()*words.length)];
+let s = symbol[Math.floor(Math.random()*symbol.length)];
+let n = Math.floor(Math.random()*9999);
+
+let result = `『${a}${b}』${s}${n}`;
+
+document.getElementById("hasil").innerText = result;
+window.last = result;
+}
+
+function copyText(){
+if(!window.last) return alert("Generate dulu!");
+navigator.clipboard.writeText(window.last);
+alert("Copied!");
+}
+
+function shareWA(){
+if(!window.last) return alert("Generate dulu!");
+window.open("https://wa.me/?text="+encodeURIComponent(window.last));
+}
+</script>
+
+</body>
